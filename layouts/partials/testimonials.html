@@ -1,0 +1,22 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<section class="section-testimonials">
+  <div class="container">
+    {{ with $data.homepage.testimonials }}
+    <div class="row justify-content-center">
+      {{ range . }}
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0 text-center">
+        <div class="testimonial-block">
+          <div class="author-details">
+            <img class="mb-1" src="{{ .image | absURL }}" alt="{{ .name }}">
+            <h5 class="mb-0">{{ .name }}</h5>
+            <i>{{ .usecase }}</i>
+          </div>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>

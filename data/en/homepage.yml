@@ -1,0 +1,65 @@
+############################# banner ############################
+banner:
+  title : "Run your own server"
+  tagline : "Use Engines to manage a home server or personal cloud."
+  image : "images/logo.png"
+  button:
+   enable : true
+   label : "Get Engines"
+   link : "get"
+  subtext : "
+  engines.org is sponsored by <a href='https://www.enginesd.com'>Enginesd</a>.
+  Are you a business? Use Enginesd to solve your software deploymeny problems!"
+
+#################################### Apps ########################
+apps:
+  button:
+    enable : true
+    label : "Browse Apps"
+    link : "apps"
+
+#################################### Proposition ########################
+proposition:
+  bg_image : "images/raspberry_pi.jpg"
+  title : "Self-host applications and internet services"
+
+
+############################# promo ############################
+promo:
+  image : "images/iphone.png"
+  title : "Great UX"
+  content : "
+  <p>
+  Engines integrates some powerful tech to give you features like one-click installs and simple maintenance.
+  </p>
+  <p>
+  You can manage your server using a GUI. You get email and user management pre-installed.
+  </p>
+  <p>
+  It couldn’t be easier!
+  </p>"
+
+############################## Testimonial ##########################
+testimonials:
+  - name : "Mimi"
+    usecase : "Photographer"
+    image : "images/people/mimi.jpg"
+    content : "
+    My photos are safe on my server.
+    They're not going to be unexpectedly compressed or resized.
+    I know where they are. I know that they're backed-up."
+  - name : "Marty"
+    usecase : "IOT Hobbiest"
+    image : "images/people/marty.jpg"
+    content : "
+    Self-hosting is the way to go for home security and automation.
+    I want to control my own destiny.
+    I want stability.
+    I want proper control of my kit."
+  - name : "Mason"
+    usecase : "Netizen"
+    image : "images/people/mason.jpg"
+    content : "
+    I've stopped using services from big internet companies.
+    Who needs them?
+    The open web is a much better place to be."

@@ -1,0 +1,9 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{- with $data.homepage.demo }}
+<section class="section-demo">
+	<div class="container">
+		<h3>{{ .title }}</h3>
+		{{ .content | markdownify }}
+	</div>
+</section>
+{{- end }}

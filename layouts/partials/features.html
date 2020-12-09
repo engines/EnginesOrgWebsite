@@ -1,0 +1,15 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{- with $data.homepage.features }}
+<section class="section-features">
+	<div class="container">
+		<div class="row">
+			{{range . }}
+			<div class="feature col-md-4">
+				<i class="icon {{ .icon }}"></i>
+				<span class="text">{{ .text }}</span>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{- end }}

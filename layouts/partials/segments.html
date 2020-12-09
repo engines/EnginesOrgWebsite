@@ -1,0 +1,19 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{- with $data.homepage.segments }}
+<section class="section-segments">
+	<div class="container">
+		{{range . }}
+		<div class="row mt-2 mb-4">
+			<div class="col-md-3 text-md-right">
+				<span class="heading">{{ .heading | markdownify }}</span>
+			</div>
+			<div class="col-md-9 text">
+				{{range .paragraphs }}
+				<p>{{ . | markdownify }}</p>
+				{{ end }}
+			</div>
+		</div>
+		{{ end }}
+	</div>
+</section>
+{{- end }}

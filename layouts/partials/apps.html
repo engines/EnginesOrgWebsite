@@ -1,0 +1,28 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+
+<section id="section-apps">
+  <div class="container">
+    <div class="library">
+      <div class="library-slider">
+        {{ range (where .Site.RegularPages "Section" "apps") }}
+        <a href="{{ .Permalink }}">
+          <div class="library-slide">
+            <div class="library-slide-overlay">
+              <span class="library-slide-popup">
+                <i class="tf-ion-android-open"></i>
+              </span>
+            </div>
+            <img class="img-fluid" src="{{.Params.icon|absURL}}" alt="{{.Title}}">
+            <h6 class="mb-2 text-center library-slide-label">{{.Params.Title}}</h6>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ with $data.homepage.apps.button }}
+  <div class='text-center mt-2'>
+    <a href="{{.link|absLangURL}}" class="btn btn-hero">{{.label}}</a>
+  </div>
+  {{ end }}
+</section>

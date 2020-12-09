@@ -1,0 +1,13 @@
+{{ $data := index .Site.Data .Site.Language.Lang }}
+{{- with $data.homepage.blurb }}
+<section class="section-blurb">
+	<div class="container">
+		{{ range . }}
+		<h3>{{ .title }}</h3>
+		{{ range .paragraphs }}
+		<p>{{ . }}</p>
+		{{ end }}
+		{{ end }}
+	</div>
+</section>
+{{- end }}

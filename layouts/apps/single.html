@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
+        <img class="img-fluid w-100" src="{{ .Params.icon | absURL }}">
+      </div>
+      <div class="col-lg-10 col-md-9 col-sm-8">
+        <h1>{{ .Title }}</h1>
+        <p>
+          {{ .Params.description | markdownify }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
